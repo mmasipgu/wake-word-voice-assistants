@@ -118,6 +118,14 @@ voice_assistant:
         green: 0%
         brightness: 100%
         effect: none
+  on_tts_end:
+    - homeassitant.service:
+        service: media_player.play_media
+        data:
+          entity_id: media_player.nesthube773
+          media_content_id: !lambda 'return x;'
+          media_content_type: music
+          announce: "true"
   on_end:
     - delay: 100ms
     - script.execute: start_wake_word

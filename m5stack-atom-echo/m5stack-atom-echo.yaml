@@ -119,7 +119,7 @@ voice_assistant:
         brightness: 100%
         effect: none
   on_tts_end:
-    - homeassitant.service:
+    - homeassistant.service:
         service: media_player.play_media
         data:
           entity_id: media_player.nesthube773

@@ -1,0 +1,12 @@
+{
+  "type": "micro",
+  "wake_word": "Harvis",
+  "author": "Marc Masi",
+  "website": "https://www.marcmasi.es/",
+  "model": "./harvis.tflite",
+  "version": 1,
+  "micro": {
+    "probability_cutoff": 0.66,
+    "sliding_window_average_size": 10
+  }
+}
